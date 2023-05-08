@@ -2,6 +2,12 @@ from sys import executable
 from subprocess import check_call
 
 dependencies = [
+    'numpy'
+    'pandas',
+    'scikit-learn',
+    'matplotlib',
+    'tensorflow',
+    'livelossplot'
 
 ]
 
