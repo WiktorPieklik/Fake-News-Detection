@@ -1,4 +1,5 @@
 from typing import List
+from enum import Enum
 from pathlib import Path
 from os import walk
 import json
@@ -12,13 +13,28 @@ DS_DIR = RAW_DIR / "dataset"
 DATASET_CSV = RAW_DIR / "dataset.csv"
 
 
+class SourceType(Enum):
+    ANDROID = "android"
+    IOS = "iOS"
+    WEB = "web"
+
+    @staticmethod
+    def get(source: str):
+        if "android" in source.lower():
+            return SourceType.ANDROID
+        elif "ios" in source.lower():
+            return SourceType.IOS
+        else:
+            return SourceType.WEB
+
+
 def get_tweet_credentials(tweet: dict, id: int, is_fake: bool, replies_count: int = 0) -> dict:
     text = tweet["text"]
     verified = tweet["user"]["verified"]
     followers_count = tweet["user"]["followers_count"]
     reactions_count = tweet["favorite_count"]
     retweet_count = tweet["retweet_count"]
-    source = tweet["source"]
+    source = SourceType.get(tweet["source"]).value
     description = tweet["user"]["description"]
 
     return {

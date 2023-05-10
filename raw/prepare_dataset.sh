@@ -7,8 +7,7 @@ dst_true="dataset/true"
 openssl enc -d -aes256 -in dataset.enc -pbkdf2 -pass file:dataset.key | tar -xzf -
 dirs=$(find raw_dataset -mindepth 2 -maxdepth 2 -type d)
 
-mkdir -p $dst_fake
-mkdir -p $dst_true
+mkdir -p $dst_fake $dst_true
 
 for dir in $dirs; do
   type=$(basename $dir)
