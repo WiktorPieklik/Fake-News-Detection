@@ -7,7 +7,8 @@ dependencies = [
     'transformers',
     'pandas',
     'numpy',
-    'alive-progress'
+    'alive-progress',
+    'scikit-learn'
 ]
 
 darwin_dependencies = [
