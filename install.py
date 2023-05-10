@@ -6,7 +6,8 @@ dependencies = [
     'jupyter',
     'transformers',
     'pandas',
-    'numpy'
+    'numpy',
+    'alive-progress'
 ]
 
 darwin_dependencies = [
