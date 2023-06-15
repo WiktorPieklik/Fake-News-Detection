@@ -1,3 +1,7 @@
+### Project ###
+raw/*
+!raw/dataset.enc
+!raw/prepare_dataset.sh
 ### Linux ###
 *~
 
