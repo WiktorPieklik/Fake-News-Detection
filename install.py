@@ -12,6 +12,8 @@ dependencies = [
     'livelossplot',
     'scipy==1.9.0',
     'tabulate'
+    'matplotlib',
+    'tensorflow',
 ]
 
 darwin_dependencies = [
