@@ -8,7 +8,10 @@ dependencies = [
     'pandas',
     'numpy',
     'alive-progress',
-    'scikit-learn'
+    'scikit-learn',
+    'livelossplot',
+    'scipy==1.9.0',
+    'tabulate'
 ]
 
 darwin_dependencies = [
